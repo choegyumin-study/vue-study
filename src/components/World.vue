@@ -1,11 +1,11 @@
 <template>
-  <span class="hello">
-    Hello,
+  <span class="world">
+    World!
   </span>
 </template>
 
 <script>
   export default {
-    name: 'hello',
+    name: 'world',
   };
 </script>

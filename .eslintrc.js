@@ -34,6 +34,10 @@ module.exports = {
       'optionalDependencies': ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // Require modules with a single export to use a default export
+    'import/prefer-default-export': 'off',
+    // Forbid import of modules using absolute paths
+    'import/no-absolute-path': 'error'
   }
 }

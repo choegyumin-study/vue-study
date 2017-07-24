@@ -12,5 +12,5 @@ export default {
 </script>
 
 <style lang="less">
-@import "App.less";
+@import "styles/styles.less";
 </style>
