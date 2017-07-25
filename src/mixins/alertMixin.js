@@ -1,4 +1,4 @@
-export const myAlert = {
+export const alertMixin = {
   methods: {
     openAlert: (str) => {
       alert(str);

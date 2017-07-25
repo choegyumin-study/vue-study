@@ -17,17 +17,19 @@
       <hello></hello>
       <world></world>
     </p>
+    <button @click="testHelper">헬퍼(function) 테스트</button>
     <button @click="testMixin">믹스인 테스트</button>
   </div>
 </template>
 
 <script>
 import { Hello, World } from '@/components/index';
-import { myAlert } from '@/mixins/index';
+import { alertHelper } from '@/helpers/index';
+import { alertMixin } from '@/mixins/index';
 
 export default {
   name: 'dashboard',
-  mixins: [myAlert],
+  mixins: [alertMixin],
   components: { Hello, World },
   data() {
     return {
@@ -41,9 +43,12 @@ export default {
     };
   },
   methods: {
+    testHelper() {
+      alertHelper('This is Helper!');
+    },
     testMixin() {
       const context = this;
-      context.openAlert('Hi!');
+      context.openAlert('This is Mixin!');
     },
     reverseMessage() {
       const context = this;

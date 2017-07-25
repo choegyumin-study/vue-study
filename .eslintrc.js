@@ -37,10 +37,12 @@ module.exports = {
     'import/prefer-default-export': 'off',
     // Forbid import of modules using absolute paths
     'import/no-absolute-path': 'off',
+    // disallow declaration of variables that are not used in the code
+    'no-unused-vars': 'error',
+    // disallow unnecessary semicolons
+    'no-extra-semi': 'warn',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    // disallow declaration of variables that are not used in the code
-    'no-unused-vars': 'warn',
     // disallow the use of alert, confirm, and prompt
     'no-alert': 'off',
     // enforce spacing inside single-line blocks
