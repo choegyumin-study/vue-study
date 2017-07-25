@@ -24,9 +24,9 @@
 </template>
 
 <script>
-  import { Hello, World } from '@/components/index';
-  import { alertHelper } from '@/helpers/index';
-  import { alertMixin } from '@/mixins/index';
+  import { Hello, World } from '@/components';
+  import { alertHelper } from '@/helpers';
+  import { alertMixin } from '@/mixins';
 
   export default {
     mixins: [alertMixin],

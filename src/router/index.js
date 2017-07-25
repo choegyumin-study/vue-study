@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import { AboutPage, DashboardPage } from '@/pages/index';
+import { AboutPage, DashboardPage } from '@/pages';
 
 Vue.use(Router);
 
