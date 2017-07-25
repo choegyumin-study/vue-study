@@ -1,3 +1,7 @@
-import Dashboard from './Dashboard/Dashboard';
+import AboutView from './About/About';
+import DashboardView from './Dashboard/Dashboard';
 
-export { Dashboard };
+export {
+  AboutView,
+  DashboardView,
+};

@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div>
+      <img src="./assets/logo.png" style="vertical-align: middle;" aria-hidden="true">
+    </div>
+    <router-link to="/">Dashboard</router-link>
+    <router-link to="about">About</router-link>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-};
+  export default {
+    name: 'app',
+  };
 </script>
 
 <style lang="less">
-@import "styles/styles.less";
+  @import "styles/styles.less";
 </style>

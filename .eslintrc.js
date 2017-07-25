@@ -47,6 +47,14 @@ module.exports = {
     'no-alert': 'off',
     // enforce spacing inside single-line blocks
     'block-spacing': ['warn', 'always'],
+    // require trailing commas in multiline object literals
+    'comma-dangle': ['warn', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'always-multiline',
+    }],
     // require padding inside curly braces
     'object-curly-spacing': ['warn', 'always'],
     // require method and property shorthand syntax for object literals
