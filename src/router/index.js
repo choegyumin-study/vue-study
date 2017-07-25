@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import { AboutView, DashboardView } from '@/views/index';
+import { AboutPage, DashboardPage } from '@/pages/index';
 
 Vue.use(Router);
 
@@ -10,15 +10,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: DashboardView,
+      component: DashboardPage,
     },
     {
       path: '/dashboard',
-      component: DashboardView,
+      component: DashboardPage,
     },
     {
       path: '/about',
-      component: AboutView,
+      component: AboutPage,
     },
   ],
 });
