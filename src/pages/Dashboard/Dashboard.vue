@@ -32,7 +32,7 @@
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
       <button @click="incrementIfOdd">Increment if odd</button>
-      <button @click="incrementAsync">Increment async</button>
+      <button @click="incrementDelay">Increment async</button>
     </div>
   </div>
 </template>
@@ -85,9 +85,9 @@
         const context = this;
         context.$store.dispatch('incrementIfOdd');
       },
-      incrementAsync() {
+      incrementDelay() {
         const context = this;
-        context.$store.dispatch('incrementAsync');
+        context.$store.dispatch('incrementDelay');
       },
     },
   };

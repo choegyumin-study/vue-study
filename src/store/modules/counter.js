@@ -36,9 +36,9 @@ const ACTIONS = {
       commit(TYPES.INCREMENT);
     }
   },
-  incrementAsync({ commit }) {
+  incrementDelay({ commit }) {
     setTimeout(() => {
-      commit(TYPES.DECREMENT);
+      commit(TYPES.INCREMENT);
     }, 1000);
   },
 };
