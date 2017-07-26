@@ -12,12 +12,12 @@ const STATE = {
 };
 
 const GETTERS = {
-  count: s => s.count,
-  recentHistory: (s) => {
+  count: state => state.count,
+  recentHistory: (state) => {
     const limit = 5;
-    const end = s.history.length;
+    const end = state.history.length;
     const begin = end - limit < 0 ? 0 : end - limit;
-    return s.history
+    return state.history
       .slice(begin, end)
       .toString()
       .replace(/,/g, ', ');
