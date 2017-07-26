@@ -13,9 +13,14 @@ var webpackConfig = merge(baseConfig, {
   devtool: '#inline-source-map',
   resolveLoader: {
     alias: {
-      // necessary to to make lang="scss" work in test when using vue-loader's ?inject option 
+      // necessary to to make lang="scss" work in test when using vue-loader's ?inject option
       // see discussion at https://github.com/vuejs/vue-loader/issues/724
-      'scss-loader': 'sass-loader'
+      'postcss-loader': 'postcss-loader',
+      'less-loader': 'less-loader',
+      'sass-loader': 'sass-loader?indentedSyntax',
+      'scss-loader': 'sass-loader',
+      'stylus-loader': 'stylus-loader',
+      'styl-loader': 'stylus-loader'
     }
   },
   plugins: [
