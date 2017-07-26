@@ -36,7 +36,7 @@ const ACTIONS = {
       commit(TYPES.INCREMENT);
     }
   },
-  incrementDelay({ commit }) {
+  incrementAfterDelay({ commit }) {
     setTimeout(() => {
       commit(TYPES.INCREMENT);
     }, 1000);
