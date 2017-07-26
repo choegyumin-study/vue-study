@@ -20,10 +20,25 @@
     </p>
     <button @click="testHelper">헬퍼(function) 테스트</button>
     <button @click="testMixin">믹스인 테스트</button>
+    <fieldset>
+      <legend>Count</legend>
+      {{ count }}
+    </fieldset>
+    <fieldset>
+      <legend>Recent Actions</legend>
+      {{ recentHistory || "&nbsp;" }}
+    </fieldset>
+    <div>
+      <button @click="increment">+</button>
+      <button @click="decrement">-</button>
+      <button @click="incrementIfOdd">Increment if odd</button>
+      <button @click="incrementAsync">Increment async</button>
+    </div>
   </div>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
   import { Hello, World } from '@/components';
   import { alertHelper } from '@/helpers';
   import { alertMixin } from '@/mixins';
@@ -42,6 +57,10 @@
         ],
       };
     },
+    computed: mapGetters([
+      'count',
+      'recentHistory',
+    ]),
     methods: {
       testHelper() {
         alertHelper('This is Helper!');
@@ -53,6 +72,22 @@
       reverseMessage() {
         const context = this;
         context.message = context.message.split('').reverse().join('');
+      },
+      increment() {
+        const context = this;
+        context.$store.dispatch('increment');
+      },
+      decrement() {
+        const context = this;
+        context.$store.dispatch('decrement');
+      },
+      incrementIfOdd() {
+        const context = this;
+        context.$store.dispatch('incrementIfOdd');
+      },
+      incrementAsync() {
+        const context = this;
+        context.$store.dispatch('incrementAsync');
       },
     },
   };

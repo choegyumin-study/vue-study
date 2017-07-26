@@ -1,35 +1,20 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import * as getters from './getters';
+
 import * as actions from './actions';
-import * as mutations from './mutations';
+import * as getters from './getters';
+
+import counter from './modules/counter';
 
 Vue.use(Vuex);
 
-const state = {
-  count: 0,
-  history: [],
-};
+const debug = process.env.NODE_ENV !== 'production';
 
-const store = new Vuex.Store({
-  state,
-  getters,
+export default new Vuex.Store({
   actions,
-  mutations,
+  getters,
+  modules: {
+    counter,
+  },
+  strict: debug,
 });
-
-if (module.hot) {
-  module.hot.accept([
-    './getters',
-    './actions',
-    './mutations',
-  ], () => {
-    store.hotUpdate({
-      getters,
-      actions,
-      mutations,
-    });
-  });
-}
-
-export default store;
